@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    color: white;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 5px solid red;
+    padding: 20px;
+    width: 70%;
+
+    position: relative; /* To make my emoji at fixed position*/
+}
+
+#text {
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+#buttonContainer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 15px;
+    background-color: red;
+    color: white;
+    outline: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#playAgainBtn {
+    display: none;
+}
+
+#resetBtn {
+    display: none;
+}
+
+#winContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#win1,
+#win2 {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: monospace;
+    background-color: rgb(32, 213, 245);
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.line {
+    border-top: 2px solid black;
+    margin: 5px 0;
+}
+
+#winName1,
+#winName2 {
+    letter-spacing: 1px;
+}
+
+#winNumber1,
+#winNumber2 {
+    font-size: 30px;
+}
+
+#game {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+#rock,
+#paper,
+#scissor {
+    cursor: pointer;
+
+    width: 205px;
+    height: 205px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 25px;
+}
+
+#winEmoji{
+    position: absolute;
+    z-index: 5555;
+    
+}
+#winEmoji img{
+    width: 500px;
+}
+
+
+#result{
+    margin-top: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+small{
+    font-size: 15px;
+}
+
+
+
+
+#turn {
+    font-size: 30px;
+    margin: 20px 0;
+}
+
+@media screen and (max-width:830px) {
+    #container {
+        width: 90%;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 20px;
+    }
+
+    #rock,
+    #paper,
+    #scissor {
+        width: 170px;
+        height: 170px;
+    }
+
+    img {
+        width: 170px;
+    }
+
+}
+
+@media screen and (max-width:570px) {
+
+    #rock,
+    #paper,
+    #scissor {
+        width: 100px;
+        height: 100px;
+    }
+
+    img {
+        width: 100px;
+    }
+}
+
+@media screen and (max-width:410px) {
+    #winName1 {
+        font-size: 20px;
+    }
+
+    #rock,
+    #paper {
+        margin-bottom: 20px;
+    }
+}
